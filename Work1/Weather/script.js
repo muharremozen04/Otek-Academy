@@ -18,12 +18,16 @@ form.addEventListener('submit', (event) => {
 		.then(data => {
 			const location = data.location.name;
 			const temperature = data.current.temp_c;
+			const date = data.location.localtime;
 			//fetch() metodunu kullanılarak response.json() ile verileri işler ve değişkenlere atar
 
 			result.innerHTML = `
-				<p>${location}'da hava durumu:</p>
-				<p>Sıcaklık: ${temperature} &#8451;</p>
-				
+			<div id="box3">
+			   
+				<p id = "box1"> ${location}'da hava durumu</p>
+				<p id = "box2">Sıcaklık: ${temperature} &#8451;</p>
+				<p id = "box4"> Tarih: ${date}  Saati İtibariyle</p>
+				</div>
 			`;
             //result'ın innerHTML özelliğini kullanarak hava durumu bilgilerini HTML olarak görüntüler.
 			
