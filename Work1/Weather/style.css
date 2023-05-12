@@ -62,7 +62,7 @@ body {
     width: 470px;
     height: 100px;
     color: aliceblue;
-  
+    box-shadow: 0 0 20px rgba(60, 58, 143, 0.5);
   }
 
   #box2 {
@@ -74,7 +74,7 @@ body {
     width: 470px;
     height: 100px;
     color: aliceblue;
-    
+    box-shadow: 0 0 20px rgba(60, 58, 143, 0.5);
     
   }
 
@@ -98,5 +98,6 @@ body {
     width: 470px;
     height: 100px;
     color: aliceblue;
+    box-shadow: 0 0 20px rgba(60, 58, 143, 0.5);
 
   }
