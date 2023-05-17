@@ -5,7 +5,7 @@
 ![Work1](https://github.com/muharremozen04/Otek/assets/60547236/996e1ab0-c8ae-4847-89ea-d8aa9f133422)
 
 
-## Project Display Image!
+## 2- Project Display Image!
 
 **Work - 2:**<br>
 ![2](https://github.com/muharremozen04/Otek/assets/60547236/8d1e4897-4a29-4108-95f8-0f37a1c84e8b)
