@@ -1,11 +1,18 @@
 const form = document.querySelector("form");
 const galleryList = document.querySelector(".search-gallery");
-
+//form değişkeni, HTML'deki ilk <form> öğesini seçer.
+//galleryList değişkeni, HTML'deki .search-gallery sınıfına sahip öğeyi seçer.
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const search = document.querySelector("#search-input").value;
     galleryList.innerHTML = "";
-
+    //form öğesine bir submit olay dinleyicisi eklenir. Bu dinleyici,
+    // form gönderildiğinde çalışır.
+   //e.preventDefault() yöntemi, formun varsayılan davranışını engeller, 
+   //yani sayfanın yeniden yüklenmesini önler.
+   //const search = document.querySelector("#search-input").value; ile kullanıcının arama kutusuna girdiği değeri alır ve search değişkenine atar.
+   //galleryList.innerHTML = ""; ile galeri listesini temizler.
+    ///
     fetch(
         `https://api.unsplash.com/search/photos?query=${search}&client_id=Je0UqxQNYCz-x9R1uVow91Z2O0kCGkyus6cbwacZ3Kk`
     )
@@ -37,6 +44,14 @@ form.addEventListener("submit", (e) => {
         });
 });
 
+//fetch() yöntemi, belirtilen URL'ye bir GET isteği yapar ve Unsplash API'dan fotoğraf arama sonuçlarını alır.
+//İstek sonucunda gelen veri, önce res.json() ile JSON formatına dönüştürülür.
+//Daha sonra, alınan veri üzerinde işlem yapılır. Eğer sonuçlar mevcutsa (data.results.length > 0), 
+//her bir sonuç için bir <div> oluşturulur ve içine bir <img> eklenir. Oluşturulan bu öğeler, galeri listesine (galleryList) eklenir.
+//Eğer sonuç yoksa, "Fotoğraf bulunamadı." içeren bir <p> öğesi oluşturulur,
+// bu öğe "no-results-message" sınıfını alır ve galeri listesine eklenir.
+//finally bloğunda, galerideki her resim için bir olay dinleyicisi eklenir. Bu dinleyici, bir resme tıklandığında openModal işlevini çağırır.
+//
 const openModal = (e) => {
     const modal = document.querySelector(".modal");
     modal.classList.add("show");
@@ -60,6 +75,15 @@ const openModal = (e) => {
     addNavigationButtons();
 };
 
+//openModal işlevi, modal penceresini açar.
+//const modal = document.querySelector(".modal"); ile modal öğesini seçer.
+//modal.classList.add("show"); ile modalın "show" sınıfını ekler ve görünür hale getirir.
+//const modalContent = modal.querySelector(".modal-content"); ile modal içeriğini temsil eden öğeyi seçer.
+//modalContent.innerHTML = ""; ile modal içeriğini temizler.
+//Kapatma simgesi için bir <div> oluşturulur, sınıfları eklenir, içeriği ayarlanır ve kapatma işlevine bir olay dinleyicisi eklenir.
+//Tıklanan resmin büyük boyutlu URL'si (bigImage) alınır ve bir <img> öğesi oluşturulur, kaynak (src) ayarlanır ve modal içeriğine eklenir.
+//addNavigationButtons() işlevi çağrılarak modal'a gezinme düğmeleri eklenir.
+
 const addNavigationButtons = () => {
   const modal = document.querySelector(".modal");
 
@@ -79,6 +103,11 @@ const addNavigationButtons = () => {
   modal.appendChild(previousButton);
   modal.appendChild(nextButton);
 };
+
+//addNavigationButtons işlevi, modal'a gezinme düğmelerini ekler.
+//İleri düğmesi (nextButton) ve geri düğmesi (previousButton) için <button> öğeleri oluşturulur, 
+//içerikleri ve sınıfları ayarlanır ve ilgili işlevlere olay dinleyicileri eklenir.
+//Düğmeler modal'a (modal) eklenir.
 
 let currentImageIndex = 0; // Mevcut resim indeksi
 
@@ -110,17 +139,31 @@ const previousImage = () => {
   changeImage(-1);
 };
 
+
+//currentImageIndex değişkeni, mevcut görüntünün dizinini tutar.
+//changeImage işlevi, mevcut görüntüyü değiştirir. İleri veya geri yönde ilerlemeyi belirten bir artış/değer azalışı alır.
+//gallery değişkeni, galerideki tüm resim öğelerini seçer.
+//numImages değişkeni, galerideki toplam resim sayısını tutar.
+//currentImageIndex değeri artırılır veya azaltılır ve sınırlar kontrol edilir. İndeks 0'dan küçükse, son resim indeksine geçer.
+// İndeks resim sayısından büyük veya eşitse, ilk resim indeksine döner.
+//Modal içeriğini temsil eden öğe (modalContent) ve mevcut görüntüyü temsil eden öğe (currentImage) seçilir
+// ve currentImage öğesinin kaynağı, galerideki yeni görüntünün kaynağıyla güncellenir.
+
 const closeModal = () => {
   const modal = document.querySelector(".modal");
   modal.classList.remove("show");
   modal.innerHTML = "";
 };
+//closeModal işlevi, modalı kapatır.
+//Modal öğesi seçilir (modal), "show" sınıfı kaldırılır ve içeriği temizlenir.
 
 // ESC tuşuyla modalı kapatma
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeModal();
   }
+  //Klavye olayını dinleyen bir olay dinleyicisi eklenir. 
+  //Eğer tuş "Escape" ise (e.key === "Escape"), closeModal işlevi çağırılır ve modal kapatılır.
 });
 
 // Modal kapatma işlemini tetikleyecek bir olay dinleyicisi
@@ -129,6 +172,8 @@ document.addEventListener("click", (e) => {
   if (e.target === modal) {
     closeModal();
   }
+  //ıklama olayını dinleyen bir olay dinleyicisi eklenir. 
+  //Eğer tıklanan öğe modal öğesiyle (e.target === modal) aynı ise, closeModal işlevi çağırılır ve modal kapatılır.
 });
 
 // Açılan resimlerde ileri geri işlevselliğini etkinleştir
@@ -140,3 +185,6 @@ const enableGalleryNavigation = () => {
     });
   });
 };
+//enableGalleryNavigation işlevi, galeri gezinme işlevselliğini etkinleştirir.
+//Tüm galeri resimlerini seçer (gallery), 
+//her bir resim için bir olay dinleyicisi ekler. Bu dinleyici, bir resme tıklandığında openModal işlevini çağırır.

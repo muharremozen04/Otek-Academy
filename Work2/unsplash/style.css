@@ -3,10 +3,18 @@
     padding: 0;
     margin: 0;
   }
-  
+   /*  evrensel seçiciyi temsil eder ve tüm HTML öğelerini seçer.
+box-sizing: border-box; özelliği, öğelerin içerik kutusunun boyutunu
+ hesaplamak için içerik, kenarlık ve dolgu alanlarını dahil eder.
+padding: 0; tüm öğelerin iç kenar boşluğunu sıfırlar.
+margin: 0; tüm öğelerin dış kenar boşluğunu sıfırlar. */
   img {
     max-width: 100%;
   }
+   /*  img etiketi için stil tanımlanır.
+max-width: 100%; özelliği, görüntülerin en fazla %100
+ genişliğe sahip olmasını sağlar, 
+böylece görüntülerin belirli bir genişlikte sıkışmasını önler. */
   
   .search-form {
     position: relative;
@@ -16,6 +24,13 @@
     align-items: center;
     justify-content: center;
   }
+     /*  .search-form sınıfı için stil tanımlanır.
+position: relative; özelliği, öğenin normal akış içinde pozisyonlanmasını sağlar.
+width: 100%; özelliği, öğenin yüzde 100 genişliğe sahip olmasını sağlar.
+height: 100%; özelliği, öğenin yüzde 100 yüksekliğe sahip olmasını sağlar.
+display: flex; özelliği, öğenin içindeki öğeleri bir satırda hizalamak için esnek bir kutu modeli kullanmasını sağlar.
+align-items: center; özelliği, öğeleri dikey olarak ortalamak için kullanılır.
+justify-content: center; özelliği, öğeleri yatay olarak ortalamak için kullanılır. */
   
   .search-form input {
     width: 500px;
@@ -27,6 +42,15 @@
     font-size: 16px;
     transition: 0.3s;
   }
+     /* .search-form input seçici için stil tanımlanır.
+width: 500px; özelliği, giriş alanının genişliğini 500 piksel olarak belirler.
+height: 50px; özelliği, giriş alanının yüksekliğini 50 piksel olarak belirler.
+padding: 0 20px; özelliği, iç kenar boşluğunu yatayda 0 ve dikeyde 20 piksel olarak belirler.
+border: 1px solid #ddd; özelliği, 1 piksel kalınlığında ve #ddd rengine sahip bir kenarlık oluşturur.
+border-radius: 5px; özelliği, giriş alanının kenar köşelerini 5 piksel yuvarlatır.
+outline: none; özelliği, giriş alanının odaklandığında etrafında varsayılan olarak görünen vurguyu kaldırır.
+font-size: 16px; özelliği, giriş alanının metin boyutunu 16 piksel olarak belirler.
+transition: 0.3s; özelliği, geçişlerin (transition) süresini 0.3 saniye olarak belirler. */
   
   .search-gallery {
     display: grid;
@@ -34,6 +58,11 @@
     grid-gap: 20px;
     margin-top: 20px;
   }
+     /*  .search-gallery sınıfı için stil tanımlanır.
+display: grid; özelliği, öğeleri bir ızgara düzeninde hizalar.
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); özelliği, ızgara sütunlarının boyutunu belirler. auto-fill sütun sayısının otomatik olarak belirlenmesini sağlar ve minmax(250px, 1fr) her sütunun minimum 250 piksel genişliğe sahip olmasını, ancak ızgaranın genişliğine sığmadığında sütunların eşit olarak genişlemesini sağlar.
+grid-gap: 20px; özelliği, ızgara hücreleri arasındaki boşluğu belirler.
+margin-top: 20px; özelliği, üst kenar boşluğunu 20 piksel olarak belirler. */
   
   .modal {
     position: fixed;
@@ -47,14 +76,30 @@
     align-items: center;
     justify-content: center;
   }
+     /*  .modal sınıfı için stil tanımlanır.
+position: fixed; özelliği, öğenin tarayıcı penceresine göre sabitlenmesini sağlar.
+top: 0; özelliği, öğenin üst kenarının tarayıcı penceresinin üst kenarına göre hizalanmasını sağlar.
+left: 0; özelliği, öğenin sol kenarının tarayıcı penceresinin sol kenarına göre hizalanmasını sağlar.
+width: 100%; özelliği, öğenin yüzde 100 genişliğe sahip olmasını sağlar.
+height: 100vh; özelliği, öğenin tarayıcı penceresi yüksekliği kadar yüksek olmasını sağlar.
+padding: 20px; özelliği, iç kenar boşluğunu 20 piksel olarak belirler.
+background: rgba(0, 0, 0, 0.8); özelliği, arkaplan rengini siyah (0, 0, 0) ve %80 saydamlıkla belirler.
+display: none; özelliği, öğenin başlangıçta gizli olmasını sağlar.
+align-items: center; özelliği, öğeleri dikey olarak ortalamak için kullanılır.
+justify-content: center; özelliği, öğeleri yatay olarak ortalamak için kullanılır. */
   
   .modal.show {
     display: flex;
   }
+     /*  .modal.show seçicisi için stil tanımlanır.
+display: flex; özelliği, öğenin içindeki öğeleri bir satırda hizalamak için esnek bir kutu modeli kullanmasını sağlar.
+Bu stil tanımı, .modal öğesinin sınıfına .show sınıfı eklendiğinde öğenin görünür olmasını sağlar. */
   
   .modal-content {
     position: relative;
   }
+     /*  .modal-content sınıfı için stil tanımlanır.
+position: relative; özelliği, öğenin normal akış içinde pozisyonlanmasını sağlar.*/
   
   .modal-button {
     position: absolute;
@@ -68,18 +113,39 @@
     cursor: pointer;
     transition: 0.3s;
   }
+     /* .modal-button sınıfı için stil tanımlanır.
+position: absolute; özelliği, öğenin diğer öğelerin üzerine konumlandırılmasını sağlar.
+top: 50%; özelliği, öğenin yüzde 50 yükseklikteki bir konuma yerleştirilmesini sağlar.
+transform: translateY(-50%); özelliği, öğenin kendisinin yüzde -50 yüksekliğinde bir yerde hareket etmesini sağlar, böylece dikey olarak ortalanır.
+padding: 10px; özelliği, iç kenar boşluğunu 10 piksel olarak belirler.
+background-color: rgba(255, 255, 255, 0.5); özelliği, arka plan rengini beyaz (255, 255, 255) ve %50 saydamlıkla belirler.
+border: none; özelliği, kenarlık olmamasını sağlar.
+color: #333; özelliği, metin rengini #333 (koyu gri) olarak belirler.
+font-weight: bold; özelliği, metin kalınlığını kalın (bold) olarak belirler.
+cursor: pointer; özelliği, fare imlecini üzerine gelindiğinde el şekline dönüştürerek kullanıcıya tıklanabilir olduğunu gösterir.
+transition: 0.3s; özelliği, geçişlerin (transition) süresini 0.3 saniye olarak belirler. */
   
   .modal-button:hover {
     background-color: rgba(255, 255, 255, 0.8);
   }
+     /*  .modal-button:hover seçicisi için stil tanımlanır.
+background-color: rgba(255, 255, 255, 0.8); özelliği, arka plan rengini 
+beyaz (255, 255, 255) ve %80 saydamlıkla değiştirir. Bu stil tanımı,
+ .modal-button üzerine gelindiğinde arka plan rengini değiştirir. */
   
   .previous-button {
     left: 10px;
   }
+     /*  .previous-button ve .next-button sınıfları için stil tanımlanır.
+left: 10px; özelliği, öğenin sol kenarını 10 piksel uzaklığa yerleştirir.
+right: 10px; özelliği, öğenin sağ kenarını 10 piksel uzaklığa yerleştirir.*/
   
   .next-button {
     right: 10px;
   }
+       /*  .previous-button ve .next-button sınıfları için stil tanımlanır.
+left: 10px; özelliği, öğenin sol kenarını 10 piksel uzaklığa yerleştirir.
+right: 10px; özelliği, öğenin sağ kenarını 10 piksel uzaklığa yerleştirir.*/
 
   .no-results-message {
     color: red;
@@ -87,6 +153,11 @@
     font-size: 18px;
     margin-top: 20px;
 }
+     /*  ..no-results-message sınıfı için stil tanımlanır.
+color: red; özelliği, metin rengini kırmızı olarak belirler.
+text-align: center; özelliği, metni yatayda merkeze hizalar.
+font-size: 18px; özelliği, metin boyutunu 18 piksel olarak belirler.
+margin-top: 20px; özelliği, üst kenar boşluğunu 20 piksel olarak belirler.*/
 
 .close-icon {
     position: absolute;
@@ -98,3 +169,13 @@
     color: #fff;
     font-size: 20px;
 }
+
+     /* .close-icon sınıfı için stil tanımlanır.
+position: absolute; özelliği, öğenin diğer öğelerin üzerine konumlandırılmasını sağlar.
+top: 10px; özelliği, öğenin üst kenarını 10 piksel uzaklığa yerleştirir.
+right: 10px; özelliği, öğenin sağ kenarını 10 piksel uzaklığa yerleştirir.
+width: 20px; özelliği, öğenin genişliğini 20 piksel olarak belirler.
+height: 20px; özelliği, öğenin yüksekliğini 20 piksel olarak belirler.
+cursor: pointer; özelliği, fare imlecini üzerine gelindiğinde el şekline dönüştürerek kullanıcıya tıklanabilir olduğunu gösterir.
+color: #fff; özelliği, metin rengini beyaz olarak belirler.
+font-size: 20px; özelliği, metin boyutunu 20 piksel olarak belirler.*/
