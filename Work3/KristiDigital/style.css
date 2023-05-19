@@ -1,0 +1,355 @@
+body{
+  background-color: rgb(249, 245, 242);
+}
+
+.headerContainer{
+    display: flex;
+}
+
+.headerLogo{
+  
+    width: 100%;
+   
+}
+
+.logo{
+
+    height: 70px;
+    margin-left: 20%;
+}
+
+.headerMenu{
+  
+    width: 100%;
+    display: flex;
+    list-style: none;
+    margin-left: 400px;
+    
+    
+}
+
+.headerList{
+    margin: 17px;
+    font-size: large;
+    font-weight: 900;
+    
+    
+}
+
+
+
+/*  Header Kısmı   */
+
+
+.bodyContainer{
+    display: flex;
+    margin-top: 130px;
+}
+
+.bodyComment{
+ 
+    width: 100%;
+    margin-top: 50px;
+    
+}
+
+.bodyComment1{
+    margin-left: 15%;
+    opacity: 0.5;
+
+}
+.bodyComment2{
+    font-size: 300%;
+    margin-left: 15%;
+    font-weight: 900;
+}
+.bodyComment3{
+    font-size: x-large;
+    margin-left: 15%;
+    font-size: 300%;
+    font-weight: 900;
+}
+.bodyComment4{
+    margin-left: 15%;
+
+    opacity: 0.5;
+    margin-bottom: 40px;
+}
+
+.bodyComment5{
+    margin-left: 15%;
+    opacity: 0.5;
+}
+.button{
+    margin-left: 15%;
+    border-radius: 30px;
+   background-color: rgb(247, 203, 69);
+   height: 50px;
+   width: 200px;
+  font-size: 100%;
+  font-weight: 600;
+   box-shadow: 0 0 0 1px #000;
+}
+
+.bodyImage{
+    display: flex;
+
+    width: 100%;
+}
+
+.ImageBody{
+    position: absolute;
+    margin-left: 190px;
+    margin-top: 100px;
+}
+
+.ImageBodyIcon{
+    position: relative;
+   
+}
+
+/*  Bodyy 1  */
+
+.bodyBox{
+  margin-top: 20%;
+}
+
+.paragraf1{
+    text-align: center;
+    opacity: 0.5;  /*  yazıyı şefaf gösterme */
+    font-size:70%;
+}
+
+.paragraf2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 300%;
+  
+}
+
+/*  Bodyy 2 */
+
+.bodyBoxs{
+    display: flex;
+}
+
+.bodyBox1{
+    box-shadow: 0 0 0 2px #000;
+   margin: 20px;
+   border-radius: 10px;
+   background-color: white;
+   height: 500px;
+   width: 1500px;
+   margin-left: 10%;
+}
+
+.bodyBox2{
+
+    box-shadow: 0 0 0 2px #000;
+   margin: 20px;
+   border-radius: 10px;
+   background-color: white;
+   height: 500px;
+   width: 1500px;
+}
+
+.bodyBox3{
+    box-shadow: 0 0 0 2px #000;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: white;
+    height: 500px;
+    width: 1500px;
+    margin-right: 10%;
+}
+.bodyBox1Img{
+    margin-left: 5%;
+    margin-top: 8%
+}
+.bodyBox2Img{
+    margin-left: 5%;
+    margin-top: 8%
+}
+.bodyBox3Img{
+    margin-left: 5%;
+    margin-top: 8%
+}
+.bodyBoxComment1{
+    margin-left: 5%;
+}
+.bodyBoxComment2{
+    margin-left: 5%;
+}
+.bodyBoxComment3{
+    margin-left: 5%;
+}
+
+.bodyBox1 p {
+    margin-left: 5%;
+}
+.bodyBox2 p {
+    margin-left: 5%;
+}
+.bodyBox3 p {
+    margin-left: 5%;
+}
+
+/*  Bodyy 3 */
+
+.bodyFeatured{
+    display: flex;
+    width: 100%;
+}
+.featuredComment{
+   text-align: center;
+    width: 100%;
+    font-size:170%;
+    margin-top: 8%;
+}
+
+/*  Bodyy 4 */
+
+.featuredImage{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+}
+
+.featuredImage1{
+
+width: 1000%;
+}
+
+.featuredImage2{
+
+width: 1000%;
+margin-top: 350px;
+}
+
+.Image1{
+    width: 100%;
+}
+.mobile{
+ border-radius: 150px;
+ background-color: rgb(255, 145, 231);
+ width: 90px;
+ height: 50px;
+ margin-left: 5%;
+ margin-right: 2%;
+ box-shadow: 0 0 0 1px #000;
+}
+
+.web{
+    border-radius: 150px;
+    background-color: rgb(247, 203, 69);
+    width: 150px;
+    height: 50px;
+    box-shadow: 0 0 0 1px #000;
+}
+.featuredImage2 h1 {
+    margin-left: 5%;
+}
+.featuredImage2 p {
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+
+/*  Bodyy 5 */
+
+.buttonRtl{
+    border-radius: 150px;
+    background-color: rgb(34, 160, 148);
+    width: 80px;
+    height: 50px;
+    box-shadow: 0 0 0 1px #000;
+
+}
+.buttonProduct{
+    border-radius: 150px;
+    background-color: rgb(145, 168, 237);
+    width: 200px;
+    height: 50px;
+    box-shadow: 0 0 0 1px #000;
+    margin-left: 2%;
+}
+
+.featuredImage3{
+    display: flex;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.featuredImage4{
+   display: flex;
+    width: 100%;
+
+}
+.featuredImage5{
+   
+width: 100%;
+margin-top: 350px;
+ 
+font-size: 120%;
+
+
+}
+.Image2{
+    width: 100%;
+}
+
+/*  Bodyy 6 Recent */
+.recentComent{
+    width: 100%;
+    font-size: 170%;
+    text-align: center;
+    margin-top: 80px;
+    margin-block: 80px;
+    
+}
+
+.recent{
+    display: flex;
+
+    width: 100%;
+}
+
+.img1{
+
+height: 310px;
+}
+.recentImages{
+    display: flex;
+}
+.recentImages2{
+    display: flex;
+}
+
+
+/*  Bodyy 7 About */
+
+.about{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+  
+  
+}
+
+.aboutMe{
+width: 100%;
+margin-left: 5%;
+margin-right: 5%;
+margin-top: 3%;
+
+}
+.aboutMe p{
+    font-size: 145%;
+    font-weight: 60;
+}
+
+.aboutImage{
+   
+    width: 100%;
+}
+
+.aboutImage2{
+    width: 100% ;
+}
