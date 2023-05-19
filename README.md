@@ -15,9 +15,9 @@
 
 
 ## 3- Project Display Image!
-**Writing a design with html css https://kristi.digital/ 
-**Work - 3:**<br>
 
+**Work - 3:**<br>
+**Writing a design with html css https://kristi.digital/ 
 ![1](https://github.com/muharremozen04/Otek/assets/60547236/8f3e7b27-8356-4655-a21f-2394778ec2f8)
 ![2](https://github.com/muharremozen04/Otek/assets/60547236/2091ccaf-9e69-44dc-a387-c1164dc75929)
 ![3](https://github.com/muharremozen04/Otek/assets/60547236/61ab906a-52d1-4dc3-be00-9f41c13e9ce9)
