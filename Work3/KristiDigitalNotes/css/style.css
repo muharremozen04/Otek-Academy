@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap');
+/*başka bir CSS dosyasını mevcut bir CSS dosyasına içe aktarmak için kullanılır. */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Tüm öğelerde "box-sizing" özelliğini "border-box" olarak ayarlar.
+       "border-box" kutu modelini temsil eder, yani öğelerin genişlik ve yükseklik özellikleri
+        içerisinde kenar boşlukları ve dolgu da dahil olacak şekilde hesaplanır.
+       Bu, öğelerin boyutlarının daha öngörülebilir olmasını sağlar.. */
+    font-family: 'Work Sans', sans-serif;
+    /*tüm öğelerin metin içeriği için "Work Sans" adlı yazı tipini kullanır. . */
+}
+body{
+    background-color: #f9f5f2;
+}
+a{
+    text-decoration: none;
+     /* CSS özelliği, bir metin öğesinin altını çizme veya diğer metin süslemelerini kaldırmak için kullanılır. . */
+}
+li{
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* bir sayfadaki kaydırma işlemlerini animasyonlu ve
+     yumuşak bir şekilde gerçekleştirmek için kullanılır. Varsayılan olarak, 
+     web tarayıcıları sayfaları aniden kaydırır. Ancak scroll-behavior: smooth; 
+     kodu ekleyerek, sayfada yapılan kaydırma işlemlerinin yumuşak bir animasyonla
+      gerçekleşmesini sağlayabiliriz.*/
+  }
+
+/* buttons-start*/
+.yellow-buttons{
+    letter-spacing: 0.2px;   /* metin içindeki harfler arasındaki boşluğu ayarlamak için kullanılır.*/
+    border: 1px solid #282828; /*  CSS özelliği, bir öğenin çevresine kenarlık (border)
+     eklemek için kullanılır. Bu kod, öğenin etrafında 1 piksel kalınlığında 
+     ve #282828 olarak belirtilen renkte bir kenarlık oluşturur.*/
+    font-weight: 500;
+    background: #f7cb45;
+    border-radius: 52px;
+    display: inline-block;
+    /*display: inline-block; CSS özelliği, bir öğenin hem içerik akışında 
+    satır içi gibi davranmasını hem de blok düzende yer almasını sağlar. */
+    text-align: center;
+    box-shadow: 4px 4px #282825;
+    /*bir öğeye gölgelendirme efekti eklemek için kullanılır. Bu kod, öğenin etrafına 4 piksel 
+    sağa ve 4 piksel aşağıya doğru yayılan, #282825 olarak belirtilen renkte bir gölge oluşturur. */
+    padding: 20px;
+    transition: all .2s ease-in;
+    /* bir öğenin geçiş efektini ve animasyonunu tanımlamak için kullanılır. 
+      Bu kod, tüm özelliklerin (genellikle öğenin durumu, boyutu, rengi, gölgesi vb.)
+      0.2 saniye süreyle yumuşak bir geçişle (ease-in) değişmesini sağlar.
+      transition özelliği, belirli bir öğenin belirli bir olaya tepki vererek 
+      özelliklerinde yumuşak bir geçiş efekti oluşturmasını sağlar. Bu olaylar 
+      genellikle bir öğe üzerine gelme (hover), tıklama (click) veya başka bir etkileşimdir.*/
+}
+.yellow-buttons:hover{
+    box-shadow: 8px 8px #282825;
+    transform: translate(-5px,-5px);
+    /* üzerine gelindiğinde (hover durumu), bu stil kurallarının uygulanmasını belirtir.
+     Bu stil kuralları, .yellow-buttons sınıfına sahip öğelerin üzerine gelindiğinde etkili olacak.
+     box-shadow: 8px 8px #282825;:
+     Öğelerin üzerine gelindiğinde (:hover durumunda), 8 piksel sağa ve 8 piksel 
+     aşağıya doğru bir gölge oluşturur. Gölgenin rengi #282825 olarak belirlenmiştir.
+     Bu, öğelerin üzerine gelindiğinde bir gölge efekti ekler.
+ 
+     transform: translate(-5px, -5px);:
+     Öğelerin üzerine gelindiğinde (:hover durumunda), öğeleri 5 piksel sola ve 5 piksel yukarıya 
+     doğru kaydırır. Bu, öğelerin üzerine gelindiğinde bir kaydırma efekti uygular.*/
+}
+
+/* buttons-end*/
+
+/* header-start */
+header{
+    max-width: 1440px;
+    margin: auto;
+    /* CSS özelliği, bir öğenin otomatik olarak ortalanmasını sağlar.
+     Bu kod, öğenin dikey ve yatay yönde eşit bir boşluk bırakarak ortalanmasını sağlar. */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+header .logo img{
+    width: 200px;
+}
+
+header .hamburger{
+    display: none;
+    /* bir öğenin görünmez hale gelmesini sağlar.
+     Bu kod, bir öğeyi tamamen gizler ve sayfada yer kaplamasını engeller.*/
+}
+header .nav-bar ul{
+    display: flex;
+}
+header .nav-bar ul li a{
+    display: block;
+      /*kullanılarak bir öğeye blok düzende davranması söylenir. 
+      Bu, öğenin yatayda tam genişlik kaplamasını ve alt satıra geçmesini sağlar. */
+    color: #282830;
+    font-size: 18px;
+    padding: 0 10px;
+    margin: 0 5px;
+    transition: 0.2s;
+    font-weight: 500;
+}
+header .nav-bar ul li a:hover{
+    border-bottom: 1px solid #282825;
+}
+/* header-end */
+
+/* slider-start */
+.slider-inner{
+    max-width: 1440px;
+    margin: auto;
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap: 50px;
+    /*Bu stil kuralları, bir öğenin içindeki öğeleri ızgara düzeninde düzenlemek için kullanılır.
+     Öğe, ızgara sütunlarını eşit olarak böler,
+     her sütuna eşit genişlik verir ve ızgara hücreleri arasında 50 piksel boşluk bırakır.  */
+}
+.slider-inner .slider-text p{
+    font-size: 22px;
+    opacity: .8;
+    /* öğenin ne kadar saydam veya görünür olacağını belirler. */
+
+}
+.slider-inner .slider-text h1{
+    margin: 40px 0;
+    font-size: 65px;
+    line-height: 55px;
+    /* bir metin öğesinin satır yüksekliğini belirler.*/
+}
+.slider-inner .slider-text .buttons{
+    margin-top: 30px;
+}
+.slider-inner .slider-text .buttons a{
+    color: #282825;
+}
+.slider-inner .slider-photo{
+    position: relative;
+}
+
+.slider-inner .slider-photo .slider-img{
+    max-width: 374px;
+    margin-left: auto;
+    margin-right: 44px;
+    display: block;
+}
+.slider-inner .slider-photo .resimler{
+    max-width: 496px;
+    position: absolute;
+    top: -54px;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    display: block;
+}
+
+/* slider-end*/
+
+
+/* what-ı-do start*/
+
+.what-i-do-inner{
+    max-width: 1440px;
+    margin: auto;
+    padding: 50px 0;
+}
+.what-i-do-inner .header{
+    text-align: center;
+}
+.what-i-do-inner .header p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.what-i-do-inner .header h2{
+    font-size: 45px;
+    line-height: 35px;
+    margin-bottom: 35px;
+}
+.what-i-do-inner .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:20px
+    
+}
+.what-i-do-inner .cards .card{
+    border: 1px solid #282825;
+    padding: 30px 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 4px 4px #282825;
+    transition: all .2s ease-in;
+    cursor: pointer; /* bir öğenin üzerine gelindiğinde fare imlecini bir işaretçi simgesi olarak değiştirir*/
+}
+.what-i-do-inner .cards .card:hover{
+    box-shadow: 8px 8px#282525;
+    transform: translate(-4px,-4px);
+}
+.what-i-do-inner .cards .card .photo{
+    max-width: 150px;
+    margin-bottom: 20px;
+    display: block;
+}
+.what-i-do-inner .cards .card h3{
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.what-i-do-inner .cards .card p{
+    font-size:18px ;
+    margin-bottom: 50px;
+}
+.what-i-do-inner .cards .card a{
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.what-i-do-inner .cards .card a:hover{
+    opacity: .6;
+}
+.what-i-do-inner .cards .card a > i{
+    vertical-align: middle;
+    /* bir öğenin dikey hizalamasını belirlemek için kullanılır.*/
+}
+/* what-ı-do end*/
+
+
+
+/* featured-projects start*/
+.projects{
+    padding: 50px 0;
+}
+.projects h2{
+text-align: center;
+font-size: 45px;
+line-height: 35px;
+margin: 35px 0;
+}
+.projects-inner{
+    max-width: 100%;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+.projects-inner .galeri img{
+    display: block!important;
+    width: 100%;
+}
+.projects-inner .galeri img:hover{
+    opacity: 0.8;
+}
+.projects-inner .galeri-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px;
+}
+.projects-inner .galeri-text .galeri-text-header{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+.projects-inner .galeri-text .galeri-text-header .mobile{
+    border: 1px solid #282828;
+    font-weight: 500;
+    background: #ff91e7;
+    border-radius: 52px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 4px 4px #282825;
+    padding: 10px;
+}
+.projects-inner .galeri-text .galeri-text-header .web-design{
+    border: 1px solid #282828;
+    font-weight: 500;
+    background: #f7cb45;
+    border-radius: 52px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 4px 4px #282825;
+    padding: 10px;
+}
+.projects-inner .galeri-text h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.projects-inner .galeri-text p{
+    font-size: 18px;
+    padding-right: 65px;
+    letter-spacing: .2px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.projects-inner .galeri-text a{
+    font-size: 18px;
+    font-weight: 600;
+}
+.projects-inner .galeri-text a >i{
+    vertical-align: middle;
+}
+.projects-inner .galeri-text a:hover{
+    opacity: .8;
+}
+/* featured-projects end*/
+
+
+/*recent-dribbble-shots start*/
+.shorts{
+    max-width:100%;
+    padding-top:50px;
+    margin: auto;
+}
+.shorts h2{
+    text-align: center;
+    font-size: 45px;
+    line-height: 35px;
+    margin-bottom: 80px;
+}
+.shorts .shorts-gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.shorts .shorts-gallery img{
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+.shorts .shorts-gallery img:hover{
+    opacity: .8;
+}
+/*recent-dribbble-shots end*/
+
+/*about-me start*/
+.about-me{
+    max-width: 100%;
+    margin: auto;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.about-me .about-me-text{
+    padding: 45px 20px 0px 60px;
+}
+.about-me .about-me-text h2{
+    font-size: 46px;
+    margin-bottom: 30px;
+}
+.about-me .about-me-text p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.about-me .about-me-text p a{
+    text-decoration: underline; /*CSS özelliği, metin üzerinde alt çizgi eklemek için kullanılır.*/
+    color: #282525;
+}
+.about-me .about-me-text p a:hover{
+    opacity: .8;
+}
+.about-me .about-me-text p img{
+    vertical-align: middle;
+}
+.about-me .about-me-gallery img{
+    width: 100%;
+    display: block;
+}
+
+/*about-me end*/
+
+
+
+/*contact-us start*/
+.contact-us{
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:50px;
+    padding: 50px 0;
+}
+.contact-us .contact-text h2{
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.contact-us .contact-text p{
+    font-size: 20px;
+    margin-bottom: 50px;
+    line-height: 30px;
+}
+.contact-us .contact-text p a{
+    color: #282525;
+    font-weight: 700;
+}
+.contact-us .contact-text p > a:hover{
+    transform: translateY(-1px)!important;
+    opacity: .8;
+}
+.contact-us .contact-mail .form-input{
+    width: 100%;
+    color: #52514e;
+    text-align: left;
+    border: 1px solid #282825;
+    border-radius: 50px;
+    margin-bottom: 26px;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 24px 18px;
+    font-size: 18px;
+    box-shadow: 4px 4px #282825;
+}
+.contact-us .contact-mail .textarea{
+    width: 100%;
+    min-height: 150px;
+    text-align: left;
+    border: 1px solid #282825;
+    color: #52514e;
+    border-radius: 24px;
+    margin-bottom: 28px;
+    padding: 10px 20px;
+    font-size: 18px;
+    box-shadow: 4px 4px #282825;
+}
+.contact-us .contact-mail .buttons{
+    float: right;
+}
+.contact-us .contact-mail .buttons a{
+    color: #282525;
+    
+}
+
+
+/*contact-us end*/
+
+
+
+.mb-10{
+    margin-bottom: 10px!important;
+}
+
+
+/* image-wiev */
+
+.image-view{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    display: none;
+}
+
+.image-box{
+    width: 70vw;
+    height: 80vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background: tomato; */
+    display: none;
+}
+#prev-btn, #next-btn{
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#prev-btn{
+    border-right: 40px solid grey;
+    left: -50px;
+}
+
+#next-btn{
+    border-left: 40px solid grey;
+    right: -50px;
+}
+
+#next-btn:hover, #prev-btn:hover{
+    opacity: .6;
+}

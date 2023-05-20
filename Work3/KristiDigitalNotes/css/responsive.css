@@ -1,0 +1,112 @@
+@media(max-width:900px){
+    header{
+        padding: 10px 15px!important;
+    }
+    .hamburger{
+        display: block!important;
+        cursor: pointer;
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: #1b1b1b;
+        margin: 6px 0;
+    }
+    .nav-bar{
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: #f9f5f2;
+        transition: 0.2s;
+        overflow: hidden;
+        z-index: 999;
+    }
+    .nav-bar.active{
+        height: 250px;
+    }
+   
+    .nav-bar ul{
+        display: block!important;
+        margin: 50px auto 30px auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+    .nav-bar ul li a{
+        font-size: 22px!important;
+        margin: 15px 5px!important;
+    }
+    .nav-bar ul li a:hover{
+        border-bottom: none!important;
+    }
+    
+    #slider .slider-inner{
+        grid-template-columns: 1fr!important;
+        padding: 50px 20px;
+    }
+    .what-i-do-inner{
+        padding: 0 20px!important;
+    }
+    .what-i-do-inner .cards{
+        grid-template-columns: 1fr 1fr!important;
+    }
+    .shorts h2{
+        font-size: 35px!important;
+        line-height: 25px!important;
+    }
+    .shorts .shorts-gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr!important;
+    }
+    .about-me{
+        grid-template-columns: 1fr!important;
+    }
+    .about-me .about-me-text{
+        padding: 45px 20px 0px 20px!important;
+    }
+
+    .image-box{
+        height: 55vh!important;
+    }
+}
+@media(max-width:768px){
+    .projects-inner{
+        grid-template-columns: 1fr!important;
+    }
+    .contact-us{
+        grid-template-columns: 1fr!important;
+        padding: 50px 20px!important;
+    }
+
+    .image-box{
+        height: 40vh!important;
+    }
+}
+
+@media(max-width:426px){
+    .slider-inner .slider-photo .resimler{
+        max-width: 340px!important;
+        top: -40px!important;
+        right: 38px!important;
+    }
+    .slider-inner .slider-photo .slider-img{
+        max-width: 320px!important;
+    }
+
+    .what-i-do-inner .cards{
+        grid-template-columns: 1fr!important;
+    }
+    .shorts .shorts-gallery{
+        display: grid;
+        grid-template-columns: 1fr!important;
+    }
+    .image-box{
+        height: 25vh!important;
+    }
+}
