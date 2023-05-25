@@ -47,7 +47,7 @@ body{
 }
 
 .bodyComment{
- 
+  display: inline-block;
     width: 100%;
     margin-top: 50px;
     
@@ -98,6 +98,7 @@ body{
 }
 
 .ImageBody{
+  
     position: absolute;
     margin-left: 190px;
     margin-top: 100px;
@@ -105,6 +106,7 @@ body{
 
 .ImageBodyIcon{
     position: relative;
+    
    
 }
 
@@ -307,20 +309,22 @@ font-size: 120%;
 }
 
 .recent{
-    display: flex;
-
+   
     width: 100%;
 }
 
 .img1{
 
 height: 310px;
+width: 25%;
 }
 .recentImages{
     display: flex;
+    width: 100%;
 }
 .recentImages2{
     display: flex;
+    width: 100%;
 }
 
 
@@ -346,10 +350,11 @@ margin-top: 3%;
 }
 
 .aboutImage{
-   
+    display: flex;
     width: 100%;
 }
 
 .aboutImage2{
+   
     width: 100% ;
 }
